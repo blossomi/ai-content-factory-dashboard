@@ -9,7 +9,7 @@
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --lbl:110px;
+    --lbl:118px;
     --ink:#e2e8f0; --muted:#94a3b8; --dim:#64748b;
   }
   body{
@@ -123,8 +123,8 @@
 
   /* ---------- gantt ---------- */
   .gantt-wrap{position:relative}
-  .ggrid{min-width:760px}
-  .grow,.ghead{display:grid;grid-template-columns:var(--lbl) repeat(14,1fr);gap:5px 5px;align-items:center}
+  .ggrid{min-width:720px}
+  .grow,.ghead{display:grid;grid-template-columns:var(--lbl) repeat(6,1fr);gap:5px 5px;align-items:center}
   .ghead{margin-bottom:8px}
   .gday{font-size:10.5px;color:var(--dim);text-align:center;padding:4px 0;border-radius:6px}
   .gday.today{background:rgba(96,165,250,.18);color:#93c5fd;font-weight:700}
@@ -143,8 +143,8 @@
   @keyframes sh{55%{transform:translateX(100%)}100%{transform:translateX(100%)}}
   .today-line{
     position:absolute;top:30px;bottom:4px;z-index:0;pointer-events:none;border-radius:6px;
-    left:calc(var(--lbl) + (100% - var(--lbl)) * 1.5 / 14);
-    width:calc((100% - var(--lbl)) / 14);
+    left:calc(var(--lbl) + (100% - var(--lbl)) * 0.5 / 6);
+    width:calc((100% - var(--lbl)) / 6);
     background:linear-gradient(180deg,rgba(96,165,250,.13),rgba(96,165,250,.02));
     border-left:1.5px dashed rgba(96,165,250,.45);
   }
@@ -156,8 +156,6 @@
   .f4{background:linear-gradient(90deg,#fb923c,#f97316)}
   .f5{background:linear-gradient(90deg,#22d3ee,#06b6d4)}
   .f6{background:linear-gradient(90deg,#f472b6,#ec4899)}
-  .f7{background:linear-gradient(90deg,#fbbf24,#f59e0b)}
-  .f8{background:linear-gradient(90deg,#fb7185,#f43f5e)}
 
   /* ---------- phase cards ---------- */
   .phases{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -171,7 +169,6 @@
   .pbarrow{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:4px}
   .pbar{flex:1;height:8px}
   .ppct{font-size:12.5px;font-weight:800;min-width:40px;text-align:right;color:#cbd5e1}
-  .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:0}
 
   /* ---------- resources ---------- */
   .res{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 2px;border-bottom:1px dashed rgba(255,255,255,.07)}
@@ -197,9 +194,9 @@
 <div class="wrap">
 
   <header>
-    <div class="badge">两周冲刺 · 第 2 天 · 2026-11-03</div>
+    <div class="badge">核心链冲刺 · 第 1 天 · 2026-11-09</div>
     <h1>🏭 GEO 同城 AI 内容智能工厂</h1>
-    <p class="subtitle">让每家门店拥有一条全自动 AI 短视频生产线 —— 真实素材进，成片视频出，全程零人工干预</p>
+    <p class="subtitle">三天建成核心生产链（11-09 → 11-11）：店铺素材 → 爆款配方 → AI 编剧 → 智能填槽 → 云端装配，后天即出首条成片；随后三天专职测试优化，11-14 打磨交付</p>
   </header>
 
   <!-- 总进度 -->
@@ -217,22 +214,22 @@
         </svg>
         <div class="ringcenter">
           <div id="pctNum">0</div>
-          <div class="ringlabel">总进度</div>
+          <div class="ringlabel">冲刺进度</div>
         </div>
       </div>
-      <div class="ringfoot">19 / 33 项任务交付</div>
+      <div class="ringfoot">16 / 29 项任务交付</div>
     </div>
     <div class="hero-right">
-      <div class="hero-title">开工 60 小时 · 进度领先日历 4.1 倍</div>
+      <div class="hero-title">三天建成全自动生产链 · 后天交首条成片</div>
       <div class="cmp">
-        <div class="clbl"><span>📅 日历时间进度（Day 2 / 14）</span><span>14%</span></div>
-        <div class="bar"><div class="fill fgray" style="--w:14%"></div></div>
+        <div class="clbl"><span>📅 日历时间进度（Day 1 / 6）</span><span>17%</span></div>
+        <div class="bar"><div class="fill fgray" style="--w:17%"></div></div>
       </div>
       <div class="cmp">
-        <div class="clbl"><span>⚡ 任务交付进度</span><span class="chip up">领先 4.1×</span></div>
-        <div class="bar"><div class="fill fgrad" style="--w:58%"></div></div>
+        <div class="clbl"><span>⚡ 任务交付进度</span><span class="chip up">领先 3.2×</span></div>
+        <div class="bar"><div class="fill fgrad" style="--w:55%"></div></div>
       </div>
-      <div class="hero-note">数字底座 100% · 四大 AI 超级大脑真实调通 · 爆款解码引擎提前 6 天交付 · 自动化质量关卡 136 项全绿</div>
+      <div class="hero-note">建设任务全部压缩在前三天完成，后天（11-11）出首条可播放成片，最后两天专职测试优化 · 公共资产库改造 + 输入冻结骨架双阶段首日交付验收 · 双 AI 工程师流水线协作（架构主刀 + 批量执行交叉复核） · 229 项质量关卡全绿</div>
     </div>
   </section>
 
@@ -241,149 +238,173 @@
     <h2>关键指标</h2>
     <p class="sec-sub">数字来自真实工程台账，每一项都可追溯到运行记录</p>
     <div class="stats">
-      <div class="stat glass"><div class="num c1">58<small>%</small></div><div class="sname">两周任务总进度</div><div class="snote">日历时间仅流逝 14%，效率领先 4.1 倍</div></div>
-      <div class="stat glass"><div class="num c2">136</div><div class="sname">质量关卡全绿</div><div class="snote">自动化测试防线，每次改动全量体检通过</div></div>
-      <div class="stat glass"><div class="num c3">4<small> / 8</small></div><div class="sname">AI 引擎在线</div><div class="snote">创作 · 看片 · 语义 · 语音四大超级大脑真实调通</div></div>
-      <div class="stat glass"><div class="num c4">60<small>h</small></div><div class="sname">开工用时</div><div class="snote">从零起步，60 小时完成 19 项核心交付</div></div>
+      <div class="stat glass"><div class="num c1">55<small>%</small></div><div class="sname">冲刺任务总进度</div><div class="snote">29 项任务首日完成 16 项，效率领先日历 3.2 倍</div></div>
+      <div class="stat glass"><div class="num c2">229</div><div class="sname">质量关卡全绿</div><div class="snote">自动化测试防线，输入冻结骨架落地后全量体检通过</div></div>
+      <div class="stat glass"><div class="num c3">4<small> 条</small></div><div class="sname">爆款配方在线</div><div class="snote">真实爆款全链路解析产物，全网共享、只解析一次</div></div>
+      <div class="stat glass"><div class="num c4">2<small> 位</small></div><div class="sname">AI 工程师协作</div><div class="snote">资深模型主刀架构迁移，快速模型执行页面测试，交叉复核</div></div>
     </div>
   </section>
 
   <!-- 生产流水线 -->
   <section>
-    <h2>AI 全自动生产流水线</h2>
-    <p class="sec-sub">最终形态：店铺素材进 → 成片视频出，六个智能环节接力完成，全程无人碰键盘</p>
+    <h2>核心生产链 · 三天建成</h2>
+    <p class="sec-sub">建设全部压缩在 11-09 → 11-11 三天内：后天出首条可播放成片，随后转入连跑测试与优化打磨，11-14 打磨交付</p>
     <div class="glass">
       <div class="flow">
-        <div class="fnode"><div class="ico">🏪</div><div class="fname">素材入库<br>AI 智能打标</div><div class="fst build">● 建设中 83%</div></div>
+        <div class="fnode"><div class="ico">🧩</div><div class="fname">配方与素材<br>输入冻结</div><div class="fst on">✓ 已完成 · 11-09</div></div>
         <div class="farrow">➜</div>
-        <div class="fnode"><div class="ico">🎬</div><div class="fname">爆款解码<br>八大基因拆解</div><div class="fst build">● 提前交付 ✓</div></div>
+        <div class="fnode"><div class="ico">✍️</div><div class="fname">AI 编剧<br>脚本 + 四轨时间轴</div><div class="fst build">● 今夜开工</div></div>
         <div class="farrow">➜</div>
-        <div class="fnode"><div class="ico">✍️</div><div class="fname">AI 编剧<br>智能填槽排镜</div><div class="fst next">○ 11-04 启动</div></div>
+        <div class="fnode"><div class="ico">🧲</div><div class="fname">智能填槽<br>语义匹配镜头</div><div class="fst next">○ 11-10</div></div>
         <div class="farrow">➜</div>
-        <div class="fnode"><div class="ico">🎙️</div><div class="fname">声音克隆<br>AI 配音字幕</div><div class="fst next">○ 11-10 启动</div></div>
+        <div class="fnode"><div class="ico">☁️</div><div class="fname">云端装配<br>自动剪辑成片</div><div class="fst next">○ 11-11</div></div>
         <div class="farrow">➜</div>
-        <div class="fnode"><div class="ico">🏭</div><div class="fname">云端装配<br>自动剪辑成片</div><div class="fst next">○ 11-11 启动</div></div>
+        <div class="fnode"><div class="ico">🎬</div><div class="fname">首条成片<br>可播放 + 封面</div><div class="fst on">● 11-11 后天可看</div></div>
         <div class="farrow">➜</div>
-        <div class="fnode"><div class="ico">📦</div><div class="fname">成片出炉<br>含封面全要素</div><div class="fst next">○ 11-15 终极验收</div></div>
+        <div class="fnode"><div class="ico">🏁</div><div class="fname">连跑测试<br>+ 优化打磨</div><div class="fst next">○ 11-12 → 11-14</div></div>
       </div>
     </div>
   </section>
 
-  <!-- 14 天作战日历 -->
+  <!-- 6 天作战日历 -->
   <section>
-    <h2>14 天作战日历</h2>
-    <p class="sec-sub">2026-11-02 → 2026-11-15 · 虚线列为今日（11-03）</p>
+    <h2>6 天作战日历</h2>
+    <p class="sec-sub">2026-11-09 → 2026-11-14 · 虚线列为今日（11-09）· 前三天建成出片，后三天测试优化（末两天专职打磨）</p>
     <div class="glass gantt-wrap">
       <div class="gscroll">
         <div class="ggrid">
           <div class="today-line"></div>
           <div class="ghead">
             <div></div>
-            <div class="gday">11-02</div><div class="gday today">11-03</div><div class="gday">11-04</div><div class="gday">11-05</div><div class="gday">11-06</div><div class="gday">11-07</div><div class="gday">11-08</div><div class="gday">11-09</div><div class="gday">11-10</div><div class="gday">11-11</div><div class="gday">11-12</div><div class="gday">11-13</div><div class="gday">11-14</div><div class="gday">11-15</div>
+            <div class="gday today">11-09</div><div class="gday">11-10</div><div class="gday">11-11</div><div class="gday">11-12</div><div class="gday">11-13</div><div class="gday">11-14</div>
           </div>
-          <div class="grow"><div class="gname"><b>第一阶段</b>数字底座</div><div class="gbar done f1" style="grid-column:2/span 3"></div></div>
-          <div class="grow"><div class="gname"><b>第二阶段</b>大脑矩阵</div><div class="gbar done f2" style="grid-column:2/span 2"></div></div>
-          <div class="grow"><div class="gname"><b>第三阶段</b>智能素材库</div><div class="gbar doing f3 shimmer" style="grid-column:2/span 4"></div></div>
-          <div class="grow"><div class="gname"><b>第四阶段</b>爆款解码引擎</div><div class="gbar done f4" style="grid-column:2/span 1"></div></div>
-          <div class="grow"><div class="gname"><b>第五阶段</b>AI 编剧智能体</div><div class="gbar plan" style="grid-column:3/span 4"></div></div>
-          <div class="grow"><div class="gname"><b>第六阶段</b>克隆配音混音</div><div class="gbar plan" style="grid-column:10/span 4"></div></div>
-          <div class="grow"><div class="gname"><b>第七阶段</b>云端装配厂</div><div class="gbar plan" style="grid-column:11/span 4"></div></div>
-          <div class="grow"><div class="gname"><b>第八阶段</b>端到端验收</div><div class="gbar plan" style="grid-column:15/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第一阶段</b>公共资产库改造</div><div class="gbar done f1" style="grid-column:2/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第二阶段</b>输入冻结与链路骨架</div><div class="gbar done f2" style="grid-column:2/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第三阶段</b>AI 编剧与时间轴</div><div class="gbar plan" style="grid-column:3/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第四阶段</b>智能填槽排镜</div><div class="gbar plan" style="grid-column:3/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第五阶段</b>云端装配出片</div><div class="gbar plan" style="grid-column:4/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>第六阶段</b>首验 · 一条命令</div><div class="gbar plan" style="grid-column:4/span 1"></div></div>
+          <div class="grow"><div class="gname"><b>冲刺后程</b>连跑测试 · 优化打磨</div><div class="gbar plan" style="grid-column:5/span 3"></div></div>
         </div>
       </div>
-      <div class="gtoday-tag">▍今日 11-03：第一、二、四阶段已交付（第四阶段提前 6 天），第三阶段收尾中，第五阶段明日启动</div>
+      <div class="gtoday-tag">▍今日 11-09：公共资产库改造、输入冻结骨架两个阶段十八项任务一天全部交付验收；AI 编剧今夜开工——全部建设压缩在前三天，后天（11-11）出首条成片，后三天连跑测试与优化打磨</div>
     </div>
   </section>
 
-  <!-- 八大引擎 -->
+  <!-- 六大阶段 -->
   <section>
-    <h2>八大 AI 引擎 · 建设明细</h2>
-    <p class="sec-sub">每个引擎 = 一条独立 AI 能力生产线</p>
+    <h2>六大阶段 · 建设明细</h2>
+    <p class="sec-sub">每个阶段独立验收，产出一个可演示的结果</p>
     <div class="phases">
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第一阶段</span><span class="chip done">✓ 已完成 · 11-02</span></div>
-        <div class="ptitle">数字底座 · AI 统一图纸</div>
-        <div class="pdesc">打好智能工厂的数字地基，制定全流程通用的「AI 电子图纸」标准：今后每一条视频都按这张图纸自动生产，所有 AI 环节说同一种语言。</div>
-        <div class="ptags"><span class="ptag">数据契约</span><span class="ptag">四轨时间轴</span><span class="ptag">变更门禁</span></div>
+        <div class="phead"><span class="pnum">第一阶段</span><span class="chip done">✓ 已完成 · 11-09</span></div>
+        <div class="ptitle">公共资产库改造 · 首日收口</div>
+        <div class="pdesc">爆款配方库与模板库升级为全平台共享资产：同一条爆款视频全网只解析一次、费用只花一次，越用越准的数据飞轮开始转动；各商户的素材、成片、账单等私有数据依旧严格隔离、互不可见（已实测验证）。九项任务（数据迁移、接口、页面、测试）一天全部交付并验收。</div>
+        <div class="ptags"><span class="ptag">全局去重</span><span class="ptag">零重复计费</span><span class="ptag">租户隔离实测</span></div>
         <div class="pbarrow"><div class="bar pbar"><div class="fill f1" style="--w:100%"></div></div><span class="ppct">100%</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第二阶段</span><span class="chip done">✓ 已完成 · 11-03</span></div>
-        <div class="ptitle">超级大脑矩阵接入</div>
-        <div class="pdesc">四大 AI 超级大脑全部真实调通上线：AI 创作大脑、AI 看片大脑（150 秒长视频完整理解）、AI 语义大脑（2048 维语义向量）、AI 语音大脑（新一代语音引擎完成切换，克隆配音与智能听写全链路实测通过）。</div>
-        <div class="ptags"><span class="ptag">多模态大模型</span><span class="ptag">视频理解</span><span class="ptag">语义向量引擎</span><span class="ptag">语音引擎切换</span></div>
+        <div class="phead"><span class="pnum">第二阶段</span><span class="chip done">✓ 已完成 · 11-09</span></div>
+        <div class="ptitle">输入冻结与链路骨架 · 当日收口</div>
+        <div class="pdesc">选定一条爆款配方（24 秒露营种草模板、五槽位）+ 蜂搭账号 14 条已打标素材 + 店铺档案与主推 SKU，冻结为可校验的基准清单——冻结后素材挪动、标签增删都会被逐项拦截，每天进度可对比；生产链三段骨架（编剧 / 填槽 / 装配）接入断点续跑框架并实测推进到预期位置、失败原因如实落库。云端装配厂已开通并鉴权验证（2026-11-09 实测）。九项任务当日全部交付并交叉验收。</div>
+        <div class="ptags"><span class="ptag">基准输入冻结</span><span class="ptag">漂移逐项拦截</span><span class="ptag">链路骨架实测</span><span class="ptag">云端已就绪</span></div>
         <div class="pbarrow"><div class="bar pbar"><div class="fill f2" style="--w:100%"></div></div><span class="ppct">100%</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第三阶段</span><span class="chip doing">进行中 · 预计 11-07</span></div>
-        <div class="ptitle">智能素材库 · AI 自动打标</div>
-        <div class="pdesc">店铺每一段素材入库，AI 自动看懂内容、打好多维标签；报一道菜名，全店相关镜头秒速浮现（语义向量列已建成）。一套系统服务多家门店，各门店数据严格隔离、互不可见。收尾项：待真实店铺素材进厂做端到端实测。</div>
-        <div class="ptags"><span class="ptag">智能打标</span><span class="ptag">语义秒搜</span><span class="ptag">多门店隔离</span></div>
-        <div class="pbarrow"><div class="bar pbar"><div class="fill f3" style="--w:83%"></div></div><span class="ppct">83%</span></div>
+        <div class="phead"><span class="pnum">第三阶段</span><span class="chip doing">今夜开工</span></div>
+        <div class="ptitle">AI 编剧智能体 · 脚本与时间轴</div>
+        <div class="pdesc">爆款配方 × 本店素材 × 店铺档案三者合一，AI 编剧自动产出本店专属脚本，并精确编排四轨时间轴（画面 / 配音 / 字幕 / 音乐）；脚本结构先立标准后生产，输出全部通过机器校验，不合格不放行。</div>
+        <div class="ptags"><span class="ptag">大模型创作</span><span class="ptag">四轨时间轴</span><span class="ptag">机器校验</span></div>
+        <div class="pbarrow"><div class="bar pbar"><div class="fill f3" style="--w:0%"></div></div><span class="ppct">0%</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第四阶段</span><span class="chip done">✓ 提前交付 · 11-03（原计划 11-09，提前 6 天）</span></div>
-        <div class="ptitle">爆款基因解码引擎</div>
-        <div class="pdesc">已用 3 条真实爆款视频全链路实测通过：AI 自动转写人声、粗判筛选（综合分自动晋级）、拆解出八大成功基因——脚本、画面、配音、音乐、字幕、文字设计、封面、节奏，沉淀成可复制的爆款配方库；同款爆款二次入库直接复用，不重复花钱。</div>
-        <div class="ptags"><span class="ptag">八维解析</span><span class="ptag">爆款配方库</span><span class="ptag">零重复计费</span></div>
-        <div class="pbarrow"><div class="bar pbar"><div class="fill f4" style="--w:100%"></div></div><span class="ppct">100%</span></div>
+        <div class="phead"><span class="pnum">第四阶段</span><span class="chip plan">11-10 启动 · 与编剧同日衔接</span></div>
+        <div class="ptitle">智能填槽 · 语义匹配引擎</div>
+        <div class="pdesc">AI 看懂素材库每一段镜头，自动把最合适的片段填进脚本的每个画面槽位：报一道菜名，相关镜头秒速浮现；同一段素材不重复使用，填不上的缺口自动列清单，填槽率一目了然。</div>
+        <div class="ptags"><span class="ptag">语义匹配</span><span class="ptag">填槽率</span><span class="ptag">缺口清单</span></div>
+        <div class="pbarrow"><div class="bar pbar"><div class="fill f4" style="--w:0%"></div></div><span class="ppct">0%</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第五阶段</span><span class="chip plan">11-04 启动</span></div>
-        <div class="ptitle">AI 编剧智能体</div>
-        <div class="pdesc">爆款配方 × 本店素材 × 店铺档案三者合一，AI 编剧自动产出本店专属脚本，并精确安排每个镜头用哪段素材、每句话出现在第几秒——成片每一帧都可追溯到剧本。</div>
-        <div class="ptags"><span class="ptag">大模型创作</span><span class="ptag">智能填槽</span><span class="ptag">逐帧可追溯</span></div>
+        <div class="phead"><span class="pnum">第五阶段</span><span class="chip plan">11-11 出片 · 后天可看</span></div>
+        <div class="ptitle">云端装配厂 · 自动出片</div>
+        <div class="pdesc">四轨时间轴送达云端智能剪辑机，自动完成素材拼装、字幕烧制、封面输出，9:16 竖版成片自动出炉；云端故障时任务自动挂起并标注原因，恢复后断点续跑，一个任务都不丢。后天（11-11）即交出首条可播放成片。</div>
+        <div class="ptags"><span class="ptag">云端渲染</span><span class="ptag">断点续跑</span><span class="ptag">封面成对输出</span></div>
         <div class="pbarrow"><div class="bar pbar"><div class="fill f5" style="--w:0%"></div></div><span class="ppct">0%</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第六阶段</span><span class="chip plan">11-10 启动 · 引擎已就绪</span></div>
-        <div class="ptitle">AI 克隆配音 · 智能混音</div>
-        <div class="pdesc">只需店铺授权一段声音，AI 克隆出专属配音员，24 小时不下班；每个字自动对齐时间轴生成字幕，背景音乐自动匹配，人声响起时音乐自动让路。克隆配音引擎已提前就绪（第二阶段完成语音大脑切换并实测 9 秒成品配音）。</div>
-        <div class="ptags"><span class="ptag">语音克隆</span><span class="ptag">字级时间戳</span><span class="ptag">智能闪避混音</span></div>
-        <div class="pbarrow"><div class="bar pbar"><div class="fill f6" style="--w:30%"></div></div><span class="ppct">30%</span></div>
+        <div class="phead"><span class="pnum">第六阶段</span><span class="chip plan">11-12 起测试 · 末两天优化</span></div>
+        <div class="ptitle">端到端连跑 · 测试与优化打磨</div>
+        <div class="pdesc">一条命令从「素材 + 配方」直达成片，全程无人碰键盘；11-12 起连续多轮全链测试，最后两天专职优化打磨，验收标准：成片可播放、时长与剧本一致、任意一帧可定位到剧本原文——多留的两天就是把毛边磨掉的两天。</div>
+        <div class="ptags"><span class="ptag">一条命令</span><span class="ptag">连跑三次</span><span class="ptag">逐帧可追溯</span></div>
+        <div class="pbarrow"><div class="bar pbar"><div class="fill f6" style="--w:0%"></div></div><span class="ppct">0%</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 双 AI 协作流水线 -->
+  <section>
+    <h2>双 AI 工程师 · 协作流水线</h2>
+    <p class="sec-sub">开发模式升级（2026-11-09）：由单一 AI 开发改为双模型分工协作——资深模型主刀架构，快速模型批量执行，交叉评审通过才算交付</p>
+    <div class="glass">
+      <div class="flow">
+        <div class="fnode"><div class="ico">🧠</div><div class="fname">架构主刀<br>迁移 · 契约 · 跨模块</div><div class="fst on">GLM-5.3 资深模型</div></div>
+        <div class="farrow">➜</div>
+        <div class="fnode"><div class="ico">📋</div><div class="fname">结构化交接<br>签名 · 预期红 · 禁改区</div><div class="fst on">清单落盘</div></div>
+        <div class="farrow">➜</div>
+        <div class="fnode"><div class="ico">⚡</div><div class="fname">批量执行<br>端点 · 页面 · CLI · 测试</div><div class="fst on">Flash 快速模型</div></div>
+        <div class="farrow">➜</div>
+        <div class="fnode"><div class="ico">✅</div><div class="fname">门禁把关<br>229 项测试 · 静态检查</div><div class="fst on">退出码判定 · 双方不豁免</div></div>
+        <div class="farrow">➜</div>
+        <div class="fnode"><div class="ico">🔍</div><div class="fname">交叉验收<br>断言逐条审 · 真实冒烟</div><div class="fst on">GLM-5.3 资深模型</div></div>
+      </div>
+    </div>
+    <div class="phases" style="margin-top:16px">
+
+      <div class="pcard glass">
+        <div class="phead"><span class="pnum">GLM-5.3</span><span class="chip done">✓ 资深架构工程师 · 主刀 + 验收</span></div>
+        <div class="ptitle">资深模型 · 高判断密度任务</div>
+        <div class="pdesc">承担数据迁移、跨模块改造、契约定义与外部系统首次集成；每轮交付产出结构化交接清单（函数签名、预期红的测试、禁改文件），并对执行方的改动逐条复核断言——不只看测试绿，还审断言是否真的对准新口径，最后真实环境冒烟后才签验收。</div>
+        <div class="ptags"><span class="ptag">迁移与契约</span><span class="ptag">跨模块改造</span><span class="ptag">断言级验收</span></div>
+        <div class="pbarrow"><div class="bar pbar"><div class="fill f3" style="--w:100%"></div></div><span class="ppct">6 项交付</span></div>
       </div>
 
       <div class="pcard glass">
-        <div class="phead"><span class="pnum">第七阶段</span><span class="chip plan">11-11 启动</span></div>
-        <div class="ptitle">云端智能装配厂</div>
-        <div class="pdesc">「AI 电子图纸」送达云端超级剪辑机，自动完成素材拼装、转场、字幕特效、封面输出，1080P 竖版成片自动出炉；云端故障时任务自动挂起标注，恢复后断点续跑，一个任务都不丢。</div>
-        <div class="ptags"><span class="ptag">云端渲染</span><span class="ptag">断点续跑</span><span class="ptag">故障自愈</span></div>
-        <div class="pbarrow"><div class="bar pbar"><div class="fill f7" style="--w:0%"></div></div><span class="ppct">0%</span></div>
+        <div class="phead"><span class="pnum">DeepSeek Flash</span><span class="chip done">✓ 快速执行工程师 · 批量改造</span></div>
+        <div class="ptitle">快速模型 · 高频批量任务</div>
+        <div class="pdesc">承担有先例可循的端点、页面、CLI 与测试批量改造，每步自跑门禁并原样上报输出（含页面无头浏览器实测截图）；第二阶段输入冻结八项任务（清单冻结、档案契约、骨架、运营入口、测试）一并执行交付；单次长会话成本约为资深模型的 5%，高频小任务与机械改动首选，显著摊薄整体开发成本。</div>
+        <div class="ptags"><span class="ptag">端点 / 页面 / CLI</span><span class="ptag">测试改造</span><span class="ptag">门禁自检上报</span></div>
+        <div class="pbarrow"><div class="bar pbar"><div class="fill f2" style="--w:100%"></div></div><span class="ppct">11 项交付</span></div>
       </div>
 
-      <div class="pcard glass">
-        <div class="phead"><span class="pnum">第八阶段</span><span class="chip plan">11-15 终极验收</span></div>
-        <div class="ptitle">端到端全自动交付</div>
-        <div class="pdesc">一条真实爆款视频 + 一家真实店铺的素材进厂，全程无人碰键盘，一条带配音、字幕、音乐、封面的成品视频自动出炉——这就是两周冲刺的终点线。</div>
-        <div class="ptags"><span class="ptag">零人工干预</span><span class="ptag">成本自动计量</span><span class="ptag">真实场景验收</span></div>
-        <div class="pbarrow"><div class="bar pbar"><div class="fill f8" style="--w:0%"></div></div><span class="ppct">0%</span></div>
-      </div>
-
+    </div>
+    <div class="glass" style="margin-top:16px">
+      <div class="res"><div class="rico">🤝</div><div class="rtxt"><div class="rname">首日战例 · 公共资产库改造（A1–A9 九项任务一天闭环）</div><div class="rnote">主刀 4 项（迁移 / 模型 / 解析链 / 任务）→ 交接清单 → 执行 4 项（API / CLI / 前端 / 测试）→ 交叉验收 1 项；验收环节抓出降级脚本重复建用户的缺陷并当日修复，205 项质量关卡全绿后收口。分工、交接物、门禁、换手规则已固化为正式开发规范。</div></div><span class="chip up">一天闭环</span></div>
+      <div class="res"><div class="rico">🧩</div><div class="rtxt"><div class="rname">首日战例 · 输入冻结与链路骨架（B1–B9 九项任务同日再闭环）</div><div class="rnote">执行侧一并交付八项（输入清单冻结、档案契约、三段骨架、任务登记、运营入口、输入快照校验、测试）→ 交叉验收 1 项：漂移拦截逐项核、骨架轨迹独立复现、229 项质量关卡全绿后收口；两次闭环合计交付 18 项任务。</div></div><span class="chip up">同日双闭环</span></div>
     </div>
   </section>
 
   <!-- 资源清单 -->
   <section>
     <h2>弹药库 · 资源到位清单</h2>
-    <p class="sec-sub">生产线全速运转前的最后补给，全部为外部资源申领，工程侧已备好接入口</p>
+    <p class="sec-sub">关键路径外部资源，工程侧均已备好接入口与降级预案</p>
     <div class="glass">
-      <div class="res"><div class="rico">🔑</div><div class="rtxt"><div class="rname">方舟大模型算力钥匙</div><div class="rnote">已到账（2026-11-03）· 三大 AI 能力已凭此实测调通上线</div></div><span class="chip done">✓ 已到账</span></div>
-      <div class="res"><div class="rico">🗝️</div><div class="rtxt"><div class="rname">百炼语音钥匙（AI 克隆配音 + 智能听写）</div><div class="rnote">已到账（2026-11-03）· 语音大脑切换完成，克隆配音实测出片</div></div><span class="chip done">✓ 已到账</span></div>
-      <div class="res"><div class="rico">☁️</div><div class="rtxt"><div class="rname">云端智能装配厂开通（火山云智能剪辑引擎）</div><div class="rnote">计费口径与并发配额确认后接入 · 11-12 前后投产</div></div><span class="chip wait">等待开通</span></div>
-      <div class="res"><div class="rico">🎵</div><div class="rtxt"><div class="rname">正版音乐曲库账号</div><div class="rnote">商用版权合规 · 未到位前先出无音乐版成片，不阻塞主链</div></div><span class="chip wait">等待开通</span></div>
-      <div class="res"><div class="rico">📦</div><div class="rtxt"><div class="rname">首批真实店铺素材 30–50 段 + 店铺档案</div><div class="rnote">爆款样本视频已到位 3 条并完成解析实测 · 店铺素材进厂即可实测全链路</div></div><span class="chip wait">店铺素材等待投喂</span></div>
+      <div class="res"><div class="rico">☁️</div><div class="rtxt"><div class="rname">云端智能装配厂（MediaKit 智能剪辑引擎）</div><div class="rnote">已开通并鉴权验证通过（2026-11-09 实测）· 计费 0.06 元/分钟出片成本可算；剩余为工程侧接入（任务映射、提交轮询、成片回收），随第五阶段推进</div></div><span class="chip done">✓ 已就绪</span></div>
+      <div class="res"><div class="rico">📦</div><div class="rtxt"><div class="rname">真实店铺素材 + 店铺档案</div><div class="rnote">未到位前用现有样例素材跑通全链，验收标注「样例链路」，真实素材到位即切换</div></div><span class="chip wait">样例兜底中</span></div>
+      <div class="res"><div class="rico">🎬</div><div class="rtxt"><div class="rname">爆款配方与商品信息</div><div class="rnote">4 条真实爆款配方已在线共享（露营地 × 2 / 游乐早鸟票 / 连锁酒店）· 基准配方（24 秒五槽位）与 2 个主推 SKU 样例已随输入冻结锁定</div></div><span class="chip done">✓ 已就绪</span></div>
+      <div class="res"><div class="rico">🛡️</div><div class="rtxt"><div class="rname">质量防线与资产底座</div><div class="rnote">229 项自动化测试全绿 · 15 张数据表结构演进全部可回溯 · 双 AI 工程师协作规范已固化</div></div><span class="chip done">✓ 已就绪</span></div>
     </div>
   </section>
 
   <footer>
-    进度口径：按 33 项任务清单逐项加权（已完成 19 项）· 质量口径：136 项自动化测试全绿（2026-11-03）<br>
-    数据截至 2026-11-03 · 本看板由 AI 工程助手依据任务台账自动生成
+    进度口径：核心链冲刺 29 项任务逐项计数（已完成 16 项，2026-11-09 验收）· 质量口径：229 项自动化测试全绿（2026-11-09）<br>
+    数据截至 2026-11-09 · 本看板由 AI 工程助手依据任务台账自动生成
   </footer>
 
 </div>
@@ -391,12 +412,12 @@
 window.addEventListener('load',function(){
   document.body.classList.add('go');
   requestAnimationFrame(function(){
-    document.getElementById('ringFg').style.strokeDashoffset=(414.69*0.42).toFixed(1);
+    document.getElementById('ringFg').style.strokeDashoffset=(414.69*0.45).toFixed(1);
   });
   var el=document.getElementById('pctNum'),t0=performance.now();
   var tick=function(t){
     var p=Math.min(1,(t-t0)/1300);
-    el.textContent=Math.round(58*(1-Math.pow(1-p,3)));
+    el.textContent=Math.round(55*(1-Math.pow(1-p,3)));
     if(p<1)requestAnimationFrame(tick);
   };
   requestAnimationFrame(tick);
